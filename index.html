@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Application</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Loan Application</h1>
+    <p>Complete the form below to apply for a loan.</p>
+
+    <form id="loanForm">
+        <label>Full Name</label>
+        <input type="text" id="fullName" required>
+
+        <label>Mobile Phone Number</label>
+        <input type="tel" id="phone" required>
+
+        <label>Monthly Income (LSL)</label>
+        <input type="number" id="income" min="1" required>
+
+        <label>Loan Amount Requested (LSL)</label>
+        <input type="number" id="loanAmount" min="1" required>
+
+        <label>Repayment Period</label>
+        <select id="repaymentPeriod">
+            <option>1 Month</option>
+            <option>3 Months</option>
+            <option>6 Months</option>
+            <option>12 Months</option>
+        </select>
+
+        <label>Loan Purpose</label>
+        <textarea id="purpose"></textarea>
+
+        <label class="consent">
+            <input type="checkbox" id="consent" required>
+            I agree to submit these details for review.
+        </label>
+
+        <button type="submit">Submit Application</button>
+        <p id="status"></p>
+    </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
